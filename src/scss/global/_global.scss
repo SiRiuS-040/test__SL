@@ -1,0 +1,49 @@
+// $mobile-width-only: 699px;
+$tablet-width: 768px;
+$desktop-width: 1140px;
+
+$transition-basic: all 200ms;
+
+.body {
+    line-height: normal;
+    font-weight: 300;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 100vw;
+    // background-color: black;
+
+    color: #ffffff;
+
+    font-family: "Lato", sans-serif;
+
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+
+    // @media (min-width: $desktop-width) {
+    //     position: relative;
+    // }
+}
+
+.container {
+    padding: 0 15px;
+
+    @media (min-width: $tablet-width) {
+        max-width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+        // margin: 0 auto;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
