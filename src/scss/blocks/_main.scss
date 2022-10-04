@@ -286,6 +286,28 @@
             justify-content: center;
 
             cursor: pointer;
+
+            &.uploaded {
+                justify-content: space-between;
+                gap: 10px;
+                padding: 0 10px;
+                cursor: default;
+
+                & .order-form__input-title {
+                    display: none;
+                }
+
+                & .order-form__input-file-name {
+                    display: block;
+                }
+
+                & .order-form__input-file-delete {
+                    display: block;
+                    opacity: 1;
+                    pointer-events: all;
+                    transition: $transition-basic;
+                }
+            }
         }
     }
 
@@ -323,16 +345,34 @@
             }
         }
 
-        &-file-desc {
+        &-file-name {
+            color: $special-black;
+            display: none;
+        }
+
+        &-file-delete {
+            display: block;
+            width: 20px;
+            height: 20px;
+            // border: 1px solid red;
+            background-color: transparent;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(../img/icons/icon-button-delete.svg);
+
+            opacity: 0;
+            pointer-events: none;
+            cursor: pointer;
+
+            transition: $transition-basic;
+
+            display: none;
+        }
+
+        &-title {
             display: inline;
-
-            // width: 100%;
-            // display: inline-block;
-
-            // padding: 12px 10px;
             border-radius: 3px;
-
-            // background: rgba(255, 255, 255, 0.85);
             text-align: center;
             text-transform: uppercase;
             font-size: 15px;
@@ -341,12 +381,7 @@
 
             color: $special-black;
 
-            // padding-left: 28px;
-            padding: 0 10px 0 28px;
-            // pointer-events: none;
-
-            // opacity: 0;
-
+            padding: 10px 10px 10px 28px;
             position: relative;
 
             &::before {

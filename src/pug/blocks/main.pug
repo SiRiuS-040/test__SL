@@ -79,9 +79,11 @@ main.main
         input.order-form__input(type="email" name="email" placeholder="Ваш e-mail")
       label(for="").order-form__label.order-form__label--name 
         input.order-form__input(type="text" name="name" placeholder="Ваше имя")
-      label(for="").order-form__label.order-form__label--file 
+      label(for="").order-form__label.order-form__label--file
         input.order-form__input.order-form__input--file(type="file" name="file")
-        span.order-form__input-file-desc Прикрепить файл
+        span.order-form__input-title Прикрепить файл
+        span.order-form__input-file-name 
+        button.order-form__input-file-delete
 
 
       .order-form__range-bar.range-bar
