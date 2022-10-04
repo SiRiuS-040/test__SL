@@ -30,14 +30,50 @@ main.main
     form.content__order.order-form(action="")
 
       label(for="").order-form__label.order-form__label--system
-        input.order-form__input(type="text" name="sys-type" placeholder="Выберите тип системы")
+        input(type="text" name="sys-type" placeholder="Выберите тип системы" readonly="readonly" ).order-form__input.order-form__input--system
         .order-form__select-wrapper
-          ul.order-form__select-list 
-            li.order-form__select-item Sed ut perspiciatis
-            li.order-form__select-item Nemo enim ipsam
-            li.order-form__select-item Et harum quidem
-            li.order-form__select-item Temporibus autem
-            li.order-form__select-item Itaque earum rerum
+          ul.order-form__select-list.system-select
+            li.order-form__select-item.system-select__item
+              label.system-select__label
+                input(type="radio" name="system" value="Sed ut perspiciatis").system-select__radio-input
+                p.system-select__desc Sed ut perspiciatis
+            li.order-form__select-item.system-select__item
+              label.system-select__label
+                input(type="radio" name="system" value="Nemo enim ipsam").system-select__radio-input
+                p.system-select__desc Nemo enim ipsam
+            li.order-form__select-item.system-select__item
+              label.system-select__label
+                input(type="radio" name="system" value="Et harum quidem").system-select__radio-input
+                p.system-select__desc Et harum quidem
+            li.order-form__select-item.system-select__item
+              label.system-select__label
+                input(type="radio" name="system" value="Temporibus autem").system-select__radio-input
+                p.system-select__desc Temporibus autem
+            li.order-form__select-item.system-select__item
+              label.system-select__label
+                input(type="radio" name="system" value="Itaque earum rerum").system-select__radio-input
+                p.system-select__desc Itaque earum rerum
+
+
+
+            li.order-form__select-item.system-select__item
+              label.system-select__label
+                input(type="radio" name="system" value="Nemo enim ipsam").system-select__radio-input
+                p.system-select__desc Nemo enim ipsam
+            li.order-form__select-item.system-select__item
+              label.system-select__label
+                input(type="radio" name="system" value="Et harum quidem").system-select__radio-input
+                p.system-select__desc Et harum quidem
+            li.order-form__select-item.system-select__item
+              label.system-select__label
+                input(type="radio" name="system" value="Temporibus autem").system-select__radio-input
+                p.system-select__desc Temporibus autem
+            li.order-form__select-item.system-select__item
+              label.system-select__label
+                input(type="radio" name="system" value="Itaque earum rerum").system-select__radio-input
+                p.system-select__desc Itaque earum rerum
+
+
 
       label(for="").order-form__label.order-form__label--email 
         input.order-form__input(type="email" name="email" placeholder="Ваш e-mail")

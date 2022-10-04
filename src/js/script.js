@@ -1,7 +1,4 @@
 
-
-
-
 document.addEventListener('click', function (evt) {
     //открыть меню
     if (evt.target && evt.target.closest('.navigation__open')) {
@@ -28,20 +25,44 @@ document.addEventListener('click', function (evt) {
     // клик по списку в меню
     if (evt.target && evt.target.closest('.navigation__link')) {
         console.log('клик по списку в меню');
-        let target = evt.target.closest('.navigation__link')
-
         let navList = document.querySelector('.navigation__list')
         let menuOpen = document.querySelector('.navigation__open')
 
         navList.classList.remove('active')
         menuOpen.classList.remove('active')
+    }
 
+    // клик по выбору системы
+    if (evt.target && evt.target.closest('.order-form__input--system')) {
+        console.log('клик по выбору системы');
+        let target = evt.target.closest('.order-form__input--system')
+
+        let parent = target.closest('.order-form__label--system')
+        parent.classList.toggle('select-active')
     }
 
 
+    if (evt.target && !evt.target.closest('.order-form__label--system')) {
+        let mainSelectLabel = document.querySelector('.order-form__label--system');
+        mainSelectLabel.classList.remove('select-active')
+    }
+})
+
+
+document.addEventListener('change', function (evt) {
+    //выбор системы
+    if (evt.target && evt.target.classList.contains('system-select__radio-input')) {
+        console.log('выбор системы');
+        let target = evt.target
+        let mainSelect = document.querySelector('.order-form__input--system');
+        let parent = target.closest('.order-form__label--system')
+        mainSelect.value = target.value
+        parent.classList.remove('select-active')
+    }
+
     // if (evt.target) {
     //     console.log(evt.target);
-    //     console.log('открыть меню');
+    //     // console.log('открыть меню');
     // }
 })
 
@@ -52,11 +73,6 @@ document.addEventListener('input', function (evt) {
         let setValue = document.querySelector('.range-bar__value-data')
         setValue.textContent = `${target.value} %`
     }
-
-    // if (evt.target) {
-    //     console.log(evt.target);
-    //     console.log('открыть меню');
-    // }
 })
 
 document.addEventListener('DOMContentLoaded', function (evt) {
