@@ -28,9 +28,9 @@ main.main
           p.order-steps__item-desc Excepteur sint occaecat cupidatat non proident
 
     form.content__order.order-form(action="")
-      label(for="").order-form__label.order-form__label--system
-        input.order-form__input(type="text" name="sys-type")
 
+      label(for="").order-form__label.order-form__label--system
+        input.order-form__input(type="text" name="sys-type" placeholder="Выберите тип системы")
         .order-form__select-wrapper
           ul.order-form__select-list 
             li.order-form__select-item Sed ut perspiciatis
@@ -40,14 +40,18 @@ main.main
             li.order-form__select-item Itaque earum rerum
 
       label(for="").order-form__label.order-form__label--email 
-        input.order-form__input(type="email" name="email")
+        input.order-form__input(type="email" name="email" placeholder="Ваш e-mail")
       label(for="").order-form__label.order-form__label--name 
-        input.order-form__input(type="text" name="name")
+        input.order-form__input(type="text" name="name" placeholder="Ваше имя")
       label(for="").order-form__label.order-form__label--file 
-        input.order-form__input(type="file" name="file")
-      .order-form__range-bar-wrapper
-        p.order-form__range-bar-desc
-        input(type="text" name="range-value").order-form__range-input
-        input.order-form__range-bar(type="range")
+        input.order-form__input.order-form__input--file(type="file" name="file")
+        span.order-form__input-file-desc Прикрепить файл
 
-      button.order-form__submit(type="submit") Отправить
+
+      .order-form__range-bar.range-bar
+        .range-bar__desc-wrapper
+          p.range-bar__value-desc Sed ut perspiciatis, unde omnis iste natus 
+          p.range-bar__value-data 75 %
+        input.range-bar__input(type="range" name="range-value" min="0" max="100" value="75")
+
+      button.basic-button.basic-button--blue.order-form__submit(type="submit" ) Отправить

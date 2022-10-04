@@ -1,39 +1,54 @@
 // $mobile-width-only: 699px;
 $tablet-width: 768px;
 $desktop-width: 1140px;
-
 $transition-basic: all 200ms;
 
+// цвета
+
+$standart-white: #ffffff;
+$special-white: #c3c3c3;
+
+$special-black: #272733;
+
+$standart-black: #000000;
+$light-black: #3d4050;
+
+$standart-gray: #6f6d7b;
+$special-gray: #bbbbbb;
+
+$standart-blue: #3e9cdc;
+$special-blue: #286690;
+
+$light-blue: #3e9cdc;
+
+$range-blue: #42a9ed;
+
+//
 .body {
     line-height: normal;
     font-weight: 300;
-
     display: grid;
     grid-template-rows: auto 1fr auto;
     width: 100vw;
-    // background-color: black;
-
-    color: #ffffff;
-
+    color: $standart-white;
     font-family: "Lato", sans-serif;
-
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
-
-    // @media (min-width: $desktop-width) {
-    //     position: relative;
-    // }
 }
 
 .container {
     padding: 0 15px;
 
     @media (min-width: $tablet-width) {
+        padding: 20px;
         max-width: 1170px;
         margin-left: auto;
         margin-right: auto;
-        // margin: 0 auto;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding: 0;
     }
 }
 
