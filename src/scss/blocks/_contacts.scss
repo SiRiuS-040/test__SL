@@ -17,8 +17,7 @@
     }
 
     @media (min-width: $desktop-width) {
-        max-width: 340px;
-
+        max-width: none;
         width: 340px;
         padding-left: 35px;
         justify-content: flex-end;
@@ -38,6 +37,11 @@
             background-repeat: no-repeat;
             background-position: center center;
             background-size: contain;
+            transition: $transition-basic;
+        }
+        &:hover {
+            transition: $transition-basic;
+            color: $light-blue;
         }
         @media (min-width: $tablet-width) {
             padding-left: 30px;

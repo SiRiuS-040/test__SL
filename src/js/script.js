@@ -25,6 +25,7 @@ document.addEventListener('click', function (evt) {
         let target = evt.target.closest('.order-form__input--system');
         let parent = target.closest('.order-form__label--system');
         parent.classList.toggle('select-active');
+        parent.classList.remove('error');
     }
 
     if (evt.target && !evt.target.closest('.order-form__label--system')) {
@@ -78,15 +79,25 @@ document.addEventListener('change', function (evt) {
 function sendform() {
     if (document.forms[0].systemtype.value == "") {
         document.forms[0].systemtype.focus();
+
+        let parentLabel = document.forms[0].systemtype.closest('.order-form__label')
+        parentLabel.classList.add('error')
         return false
     }
-    if (document.forms[0].email.value == "") {
-        document.forms[0].email.focus();
-        return false
+
+    if (document.forms[0].email.value.length >= 0) {
+        let parentLabel = document.forms[0].email.closest('.order-form__label')
+        if (document.forms[0].email.value == "") {
+            document.forms[0].email.focus();
+            parentLabel.classList.add('error')
+            return false
+        }
     }
 
     if (document.forms[0].name.value == "") {
         document.forms[0].name.focus();
+        let parentLabel = document.forms[0].name.closest('.order-form__label')
+        parentLabel.classList.add('error')
         return false
     }
     return true;
@@ -102,18 +113,11 @@ document.addEventListener('input', function (evt) {
     if (evt.target && evt.target.classList.contains('order-form__input--mail')) {
         let target = evt.target;
         let parentLabel = target.closest('.order-form__label');
-        if (target.value.length == 0) {
+        if (target.value.length >= 0) {
             parentLabel.classList.remove('error');
-        } else if (target.value.length > 0) {
-            if (!(emailTest.test(target.value))) {
-                parentLabel.classList.add('error');
-            } else {
-                parentLabel.classList.remove('error');
-            }
-        } else {
-            parentLabel.classList.add('error');
         }
     }
+
     if (evt.target && evt.target.classList.contains('order-form__input--name')) {
         let target = evt.target
         let parentLabel = target.closest('.order-form__label');

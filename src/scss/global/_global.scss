@@ -15,6 +15,10 @@ $range-blue: #42a9ed;
 
 $error-red: red;
 
+html {
+    scroll-behavior: smooth;
+}
+
 .body {
     min-width: 320px;
     line-height: normal;
@@ -46,6 +50,7 @@ $error-red: red;
     transition: $transition-basic;
     font-size: 14px;
     line-height: 18px;
+    text-align: center;
     &:hover {
         transition: $transition-basic;
         opacity: 0.85;
