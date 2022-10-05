@@ -38,10 +38,7 @@
                 <li class="advantages__item">Sed ut perspiciatis, unde omnis iste natus error</li>
               </ul>
             </p>
-            <div class="promotion__button-wrapper">
-              <button class="basic-button basic-button--blue promotion__button promotion__button--order">Заказать</button>
-              <button class="basic-button promotion__button promotion__button--more">Подробнее</button>
-            </div>
+            <div class="promotion__button-wrapper"><a class="basic-button basic-button--blue promotion__button promotion__button--order" href="#order-form">Заказать</a><a class="basic-button promotion__button promotion__button--more" href="#">Подробнее</a></div>
           </div>
         </div>
       </div>
@@ -76,7 +73,7 @@
             </li>
           </ul>
         </div>
-        <form class="content__order order-form" action="" onsubmit="return sendform()">
+        <form class="content__order order-form" action="" onsubmit="return sendform()" id="order-form">
           <label class="order-form__label order-form__label--system">
             <input class="order-form__input order-form__input--system" type="text" name="systemtype" placeholder="Выберите тип системы" readonly="readonly"><span class="order-form__input-icon"></span>
             <div class="order-form__select-wrapper">
