@@ -2,8 +2,11 @@
   "name": "projects",
   "version": "1.0.0",
   "description": "gulp builder",
+  "homepage": "https://sirius-040.github.io/test__SL/",
   "main": "index.html",
   "scripts": {
+    "predeploy": "npm run build ",
+    "deplot": "gh-pages -d build",
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +15,7 @@
   "devDependencies": {
     "browser-sync": "2.26.12",
     "del": "5.1.0",
+    "gh-pages": "^4.0.0",
     "gulp-autoprefixer": "7.0.1",
     "gulp-clean-css": "4.3.0",
     "gulp-file-include": "^2.2.2",
