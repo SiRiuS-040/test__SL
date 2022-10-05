@@ -2,7 +2,6 @@
   "name": "projects",
   "version": "1.0.0",
   "description": "gulp builder",
-  "homepage": "https://sirius-040.github.io/test__SL/",
   "main": "index.html",
   "scripts": {
     "deploy": "gh-pages -d build",
