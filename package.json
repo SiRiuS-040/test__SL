@@ -5,8 +5,7 @@
   "homepage": "https://sirius-040.github.io/test__SL/",
   "main": "index.html",
   "scripts": {
-    "predeploy": "npm run build ",
-    "deplot": "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
