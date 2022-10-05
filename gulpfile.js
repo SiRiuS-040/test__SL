@@ -16,14 +16,14 @@ let path = {
         css: sourceFolder + '/scss/style.scss',
         fonts: sourceFolder + '/fonts/*.ttf',
         js: sourceFolder + '/js/script.js',
-        img: sourceFolder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
+        img: sourceFolder + '/img/**/*.+(png|jpg|gif|ico|svg|webp)',
     },
     watch: {
         html: sourceFolder + '/pug/**/*.pug',
         css: sourceFolder + '/scss/**/*.scss',
         fonts: sourceFolder + '/fonts/*.ttf',
         js: sourceFolder + '/js/**/*.js',
-        img: sourceFolder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
+        img: sourceFolder + '/img/**/*.+(png|jpg|gif|ico|svg|webp)',
     },
     clean: './' + projectFolder + '/'
 }
@@ -39,7 +39,7 @@ let { src, dest } = require('gulp'),
     cleanCss = require('gulp-clean-css'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify-es').default,
-    imageMin = require('gulp-imagemin'),
+    imagemin = require('gulp-imagemin'),
     pug = require('gulp-pug'),
     ttf2woff = require('gulp-ttf2woff'),
     ttf2woff2 = require('gulp-ttf2woff2'),
@@ -111,14 +111,14 @@ function fonts() {
 function images() {
     return src(path.src.img)
         .pipe(src(path.src.img))
-        // .pipe(
-        //     imageMin({
-        //         progressive: true,
-        //         svgoPlugins: [{removeViewBox: false}],
-        //         interlaced: true,
-        //         optimizationLevel: 3
-        //     })
-        // )
+        .pipe(
+            imagemin({
+                progressive: true,
+                svgoPlugins: [{ removeViewBox: false }],
+                interlaced: true,
+                optimizationLevel: 3
+            })
+        )
         .pipe(dest(path.build.img))
         .pipe(browsersync.stream())
 }
@@ -142,12 +142,6 @@ gulp.task('otf2ttf', function () {
         }))
         .pipe(dest(sourceFolder + '/fonts/'));
 })
-
-
-
-
-
-// const chalk = require('chalk');
 
 let srcFonts = 'src/scss/fonts.scss';
 let appFonts = 'build/fonts/';
@@ -175,39 +169,11 @@ function fontsStyle(done) {
     done();
 }
 
-
-
-// function fontsStyle(params) {
-//     let file_content = fs.readFileSync(sourceFolder + '/scss/fonts.scss');
-//     if (file_content == '') {
-//         fs.writeFile(sourceFolder + '/scss/fonts.scss', '', cb);
-//         return fs.readdir(path.build.fonts, function (err, items) {
-
-//             console.log(items);
-//             if (items) {
-//                 let c_fontname;
-//                 for (var i = 0; i < items.length; i++) {
-//                     let fontname = items[i].split('.');
-//                     fontname = fontname[0];
-//                     if (c_fontname != fontname) {
-//                         fs.appendFile(sourceFolder + '/scss/fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
-//                     } c_fontname = fontname;
-//                 }
-//             }
-//         })
-//     }
-// }
-
 function cb() {
-
 }
-
-
-
 
 let build = gulp.series(clean, gulp.parallel(js, images, css, html, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
-
 
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;

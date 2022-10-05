@@ -35,6 +35,45 @@ $error-red: red;
     }
 }
 
+.basic-button {
+    width: auto;
+    padding: 10px 15px;
+    background-color: $standart-white;
+    color: $standart-gray;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 1px solid $standart-gray;
+    transition: $transition-basic;
+    font-size: 14px;
+    line-height: 18px;
+    &:hover {
+        transition: $transition-basic;
+        opacity: 0.85;
+    }
+    &--blue {
+        background-color: $standart-blue;
+        color: $standart-white;
+        border: 1px solid $standart-white;
+        &:hover {
+            transition: $transition-basic;
+            opacity: 0.8;
+        }
+    }
+    @media (min-width: $tablet-width) {
+        padding: 15px 30px;
+        font-size: 13px;
+        line-height: 16px;
+    }
+}
+
+.visually-hidden {
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
 .container {
     padding: 0 15px;
     @media (min-width: $tablet-width) {
