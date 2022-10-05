@@ -4,37 +4,32 @@
     line-height: 16px;
     font-weight: 400;
     color: $standart-white;
-
     @media (min-width: $tablet-width) {
         font-size: 13px;
         line-height: 16px;
     }
-
     &__wrapper {
         display: flex;
         flex-direction: column;
         padding: 20px 0;
-
         @media (min-width: $tablet-width) {
             padding: 30px 0;
             display: grid;
             grid-template-columns: auto 1fr auto;
+
             align-items: center;
             justify-content: space-between;
         }
     }
-
     &__content {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
-
         @media (min-width: $tablet-width) {
             position: relative;
         }
     }
-
     &__contacts {
         @media (min-width: $tablet-width) {
             order: 3;
@@ -45,7 +40,6 @@
             order: 2;
         }
     }
-
     &__copyrights {
         @media (min-width: $tablet-width) {
             order: 1;
@@ -55,18 +49,22 @@
 
 .copyrights {
     min-width: 320px;
-
     cursor: default;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
 
     @media (min-width: $tablet-width) {
         justify-content: flex-start;
         padding-right: 25px;
-
         max-width: 200px;
     }
-
     @media (min-width: $desktop-width) {
-        max-width: 340px;
+        max-width: none;
+
+        min-width: none;
+        width: 346px;
+
         padding-right: 35px;
     }
 }
@@ -85,55 +83,47 @@
         gap: 10px;
         border-right: none;
         padding-left: 25px;
-
         max-width: 200px;
-
         justify-content: flex-end;
     }
 
     @media (min-width: $desktop-width) {
         max-width: 340px;
-        padding-left: 35px;
 
+        width: 340px;
+        padding-left: 35px;
         justify-content: flex-end;
+        justify-content: space-between;
     }
 
     &__link {
         padding-left: 30px;
         position: relative;
-
         &::before {
             position: absolute;
             content: "";
             width: 20px;
             height: 20px;
-
             top: calc(50% - 10px);
             left: 0;
-
             background-repeat: no-repeat;
             background-position: center center;
             background-size: contain;
         }
-
         @media (min-width: $tablet-width) {
             padding-left: 30px;
             position: relative;
-
             &::before {
                 position: absolute;
                 content: "";
                 width: 20px;
                 height: 20px;
-
                 top: calc(50% - 10px);
                 left: 0;
-
                 background-repeat: no-repeat;
                 background-position: center center;
             }
         }
-
         &--vk {
             margin-left: 0;
             &::before {
@@ -143,7 +133,6 @@
         &--mail {
             @media (min-width: $tablet-width) {
             }
-
             &::before {
                 background-image: url(../img/icons/icon-contacts-mail.svg);
             }
@@ -155,16 +144,14 @@
     padding: 20px 0;
     margin-top: 20px;
     margin-bottom: 20px;
-
+    color: $special-white;
     border-top: 1px solid $special-white;
     border-bottom: 1px solid $special-white;
 
     @media (min-width: $tablet-width) {
         margin: 0;
         padding: 0;
-
         width: 100%;
-
         border: none;
         border-left: 2px solid $special-white;
         border-right: 2px solid $special-white;
@@ -180,15 +167,11 @@
         @media (min-width: $tablet-width) {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
             justify-content: center;
-            // justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
-
             row-gap: 10px;
             column-gap: 30px;
-
             width: 100%;
             padding: 0 25px;
         }
@@ -202,52 +185,37 @@
 
     &__item {
         display: block;
-        // padding: 10px 10px 10px 50px;
-        // padding-left: 50px;
-
         padding-left: 30px;
         white-space: nowrap;
         position: relative;
-
         cursor: default;
-
-        // font-size: 18px;
-        // line-height: 22px;
-
         &::before {
             position: absolute;
             content: "";
             width: 20px;
             height: 20px;
-
             top: calc(50% - 10px);
             left: 0;
-
             background-repeat: no-repeat;
             background-position: center center;
             background-size: contain;
         }
-
         @media (min-width: $tablet-width) {
             padding-left: 30px;
             white-space: nowrap;
             position: relative;
             cursor: default;
-
             &::before {
                 position: absolute;
                 content: "";
                 width: 20px;
                 height: 20px;
-
                 top: calc(50% - 10px);
                 left: 0;
-
                 background-repeat: no-repeat;
                 background-position: center center;
             }
         }
-
         &--qiwi {
             &::before {
                 background-image: url(../img/icons/icon-payments-qiwi.svg);
