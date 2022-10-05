@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test_SL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" section="IE=edge">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body class="body">
+    <header class="header">
+      <h1 class="visually-hidden">LoremIpsum.Net - Лучший IT сервис!</h1>
+      <div class="container">
+        <div class="header__wrapper"><a class="header__link" href="#"> 
+            <h1 class="header__title">LoremIpsum.<span class="header__title--colored">Net</span></h1></a>
+          <nav class="header__nav navigation">
+            <button class="navigation__open"><span class="navigation__burger"></span></button>
+            <ul class="navigation__list"> 
+              <li class="navigation__item"><a class="navigation__link" href="#">Бизнес </a></li>
+              <li class="navigation__item"><a class="navigation__link" href="#">О нас </a></li>
+              <li class="navigation__item"><a class="navigation__link" href="#">Цены </a></li>
+              <li class="navigation__item"><a class="navigation__link" href="#">Оформить заказ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="promotion">
+      <div class="container">
+        <div class="promotion__wrapper">
+          <h2 class="promotion__title">Lorem ipsum  <span class="promotion__title-colored">dolor sit ametconsectetur</span> adipiscing</h2>
+          <div class="promotion__advantages-wrapper advantages">
+            <p class="promotion__sub-title">At vero eos et accusamus et iusto odio dignissimos ducimus!
+              <ul class="advantages__list">
+                <li class="advantages__item">Totam rem aperiam eaque ipsa</li>
+                <li class="advantages__item">Sit voluptatem accusantium doloremque laudantium</li>
+                <li class="advantages__item">Sed ut perspiciatis, unde omnis iste natus error</li>
+              </ul>
+            </p>
+            <div class="promotion__button-wrapper">
+              <button class="basic-button basic-button--blue promotion__button promotion__button--order">Заказать</button>
+              <button class="basic-button promotion__button promotion__button--more">Подробнее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main class="main">
+      <section class="main__section content container">
+        <div class="content__title-wrapper">
+          <h2 class="content__title">Оформление <span>Заказа</span> </h2>
+          <p class="content__desc">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+        </div>
+        <div class="content__order-steps order-steps">
+          <ul class="order-steps__list"> 
+            <li class="order-steps__item">
+              <div class="order-steps__icon-wrapper order-steps__icon-wrapper"> <img class="order-steps__item-icon" src="./img/icons/icon-search.svg" alt="Иконка выберите товар" width="55" height="55"></div>
+              <p class="order-steps__item-desc">Lorem ipsum dolor sit amet</p>
+            </li>
+            <li class="order-steps__item">
+              <div class="order-steps__icon-wrapper"> <img class="order-steps__item-icon" src="./img/icons/icon-discount.svg" alt="Иконка выберите товар" width="55" height="55"></div>
+              <p class="order-steps__item-desc">Сonsecteturadipiscing elit</p>
+            </li>
+            <li class="order-steps__item"> 
+              <div class="order-steps__icon-wrapper"><img class="order-steps__item-icon" src="./img/icons/icon-add.svg" alt="Иконка выберите товар" width="55" height="55"></div>
+              <p class="order-steps__item-desc">Sed do eiusmod tempor</p>
+            </li>
+            <li class="order-steps__item">
+              <div class="order-steps__icon-wrapper"><img class="order-steps__item-icon" src="./img/icons/icon-mail.svg" alt="Иконка выберите товар" width="55" height="55"></div>
+              <p class="order-steps__item-desc">Esse cillum doloreeu fugiat</p>
+            </li>
+            <li class="order-steps__item">
+              <div class="order-steps__icon-wrapper"><img class="order-steps__item-icon" src="./img/icons/icon-pay.svg" alt="Иконка выберите товар" width="55" height="55"></div>
+              <p class="order-steps__item-desc">Excepteur sint occaecat cupidatat non proident</p>
+            </li>
+          </ul>
+        </div>
+        <form class="content__order order-form" action="" onsubmit="return sendform()">
+          <label class="order-form__label order-form__label--system">
+            <input class="order-form__input order-form__input--system" type="text" name="systemtype" placeholder="Выберите тип системы" readonly="readonly"><span class="order-form__input-icon"></span>
+            <div class="order-form__select-wrapper">
+              <ul class="order-form__select-list system-select">
+                <li class="order-form__select-item system-select__item">
+                  <label class="system-select__label">
+                    <input class="system-select__radio-input" type="radio" name="system" value="Sed ut perspiciatis">
+                    <p class="system-select__desc">Sed ut perspiciatis</p>
+                  </label>
+                </li>
+                <li class="order-form__select-item system-select__item">
+                  <label class="system-select__label">
+                    <input class="system-select__radio-input" type="radio" name="system" value="Nemo enim ipsam">
+                    <p class="system-select__desc">Nemo enim ipsam</p>
+                  </label>
+                </li>
+                <li class="order-form__select-item system-select__item">
+                  <label class="system-select__label">
+                    <input class="system-select__radio-input" type="radio" name="system" value="Et harum quidem">
+                    <p class="system-select__desc">Et harum quidem</p>
+                  </label>
+                </li>
+                <li class="order-form__select-item system-select__item">
+                  <label class="system-select__label">
+                    <input class="system-select__radio-input" type="radio" name="system" value="Temporibus autem">
+                    <p class="system-select__desc">Temporibus autem</p>
+                  </label>
+                </li>
+                <li class="order-form__select-item system-select__item">
+                  <label class="system-select__label">
+                    <input class="system-select__radio-input" type="radio" name="system" value="Itaque earum rerum">
+                    <p class="system-select__desc">Itaque earum rerum</p>
+                  </label>
+                </li>
+                <li class="order-form__select-item system-select__item">
+                  <label class="system-select__label">
+                    <input class="system-select__radio-input" type="radio" name="system" value="Nemo enim ipsam">
+                    <p class="system-select__desc">Nemo enim ipsam</p>
+                  </label>
+                </li>
+                <li class="order-form__select-item system-select__item">
+                  <label class="system-select__label">
+                    <input class="system-select__radio-input" type="radio" name="system" value="Et harum quidem">
+                    <p class="system-select__desc">Et harum quidem</p>
+                  </label>
+                </li>
+                <li class="order-form__select-item system-select__item">
+                  <label class="system-select__label">
+                    <input class="system-select__radio-input" type="radio" name="system" value="Temporibus autem">
+                    <p class="system-select__desc">Temporibus autem</p>
+                  </label>
+                </li>
+                <li class="order-form__select-item system-select__item">
+                  <label class="system-select__label">
+                    <input class="system-select__radio-input" type="radio" name="system" value="Itaque earum rerum">
+                    <p class="system-select__desc">Itaque earum rerum</p>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </label>
+          <label class="order-form__label order-form__label--email" for=""> 
+            <input class="order-form__input order-form__input--mail" type="email" name="email" placeholder="Ваш e-mail" maxlength="50">
+          </label>
+          <label class="order-form__label order-form__label--name" for=""> 
+            <input class="order-form__input order-form__input--name" type="text" name="name" placeholder="Ваше имя" maxlength="50">
+          </label>
+          <label class="order-form__label order-form__label--file" for="">
+            <input class="order-form__input order-form__input--file" type="file" name="file"><span class="order-form__input-title">Прикрепить файл</span><span class="order-form__input-file-name"> </span><a class="order-form__input-file-delete" href="#"></a>
+          </label>
+          <div class="order-form__range-bar range-bar">
+            <div class="range-bar__desc-wrapper">
+              <p class="range-bar__value-desc">Sed ut perspiciatis, unde omnis iste natus</p>
+              <p class="range-bar__value-data">75 %</p>
+            </div>
+            <input class="range-bar__input" type="range" name="range-value" min="0" max="100" value="75">
+          </div>
+          <button class="basic-button basic-button--blue order-form__submit" type="submit">Отправить</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <section class="footer__wrapper">
+          <div class="footer__content footer__contacts contacts"> <a class="contacts__link contacts__link--mail" href="mailto:info@ipsum228.com"> info@ipsum228.com</a><a class="contacts__link contacts__link--vk" href="https://vk.com/" target="_blank">Мы вконтакте</a></div>
+          <div class="footer__content footer__payments payments">
+            <ul class="payments__list"> 
+              <li class="payments__item payments__item--qiwi">Qiwi wallet</li>
+              <li class="payments__item payments__item--ym">Yandex Money</li>
+              <li class="payments__item payments__item--wm">Web Money</li>
+            </ul>
+          </div>
+          <div class="footer__content footer__copyrights copyrights">© 2018 «LoremIpsum.net» Все права защищены.</div>
+        </section>
+      </div>
+    </footer>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
