@@ -65,7 +65,7 @@ document.addEventListener('change', function (evt) {
     if (evt.target && evt.target.classList.contains('system-select__radio-input')) {
         let target = evt.target;
         let mainSelect = document.querySelector('.order-form__input--system');
-        let parent = target.closest('.order-form__label--system');
+        let parent = document.querySelector('.order-form__label--system');
         mainSelect.value = target.value;
         parent.classList.remove('select-active');
     }
