@@ -26,59 +26,39 @@ main.main
           .order-steps__icon-wrapper
             img(src="./img/icons/icon-pay.svg", alt="Иконка выберите товар" width='55' height='55').order-steps__item-icon
           p.order-steps__item-desc Excepteur sint occaecat cupidatat non proident
-    form.content__order.order-form(action="" onsubmit="return sendform()" id="order-form")
-      label().order-form__label.order-form__label--system
-        input(type="text" name="systemtype" placeholder="Выберите тип системы" readonly="readonly" ).order-form__input.order-form__input--system
-        span.order-form__input-icon
+    form.content__order.order-form(action="url" onsubmit="return sendform()" id="order-form")
+      .order-form__system-select
+        label().order-form__label.order-form__label--system
+          input(type="text" name="systemtype" placeholder="Выберите тип системы" readonly="readonly" ).order-form__input.order-form__input--system
+          span.order-form__input-icon
         .order-form__select-wrapper
           ul.order-form__select-list.system-select
             li.order-form__select-item.system-select__item
               label.system-select__label
                 input(type="radio" name="system" value="Sed ut perspiciatis").system-select__radio-input
-                p.system-select__desc Sed ut perspiciatis
+                span.system-select__desc Sed ut perspiciatis
             li.order-form__select-item.system-select__item
               label.system-select__label
                 input(type="radio" name="system" value="Nemo enim ipsam").system-select__radio-input
-                p.system-select__desc Nemo enim ipsam
+                span.system-select__desc Nemo enim ipsam
             li.order-form__select-item.system-select__item
               label.system-select__label
                 input(type="radio" name="system" value="Et harum quidem").system-select__radio-input
-                p.system-select__desc Et harum quidem
+                span.system-select__desc Et harum quidem
             li.order-form__select-item.system-select__item
               label.system-select__label
                 input(type="radio" name="system" value="Temporibus autem").system-select__radio-input
-                p.system-select__desc Temporibus autem
+                span.system-select__desc Temporibus autem
             li.order-form__select-item.system-select__item
               label.system-select__label
                 input(type="radio" name="system" value="Itaque earum rerum").system-select__radio-input
-                p.system-select__desc Itaque earum rerum
+                span.system-select__desc Itaque earum rerum
 
-
-
-            li.order-form__select-item.system-select__item
-              label.system-select__label
-                input(type="radio" name="system" value="Nemo enim ipsam").system-select__radio-input
-                p.system-select__desc Nemo enim ipsam
-            li.order-form__select-item.system-select__item
-              label.system-select__label
-                input(type="radio" name="system" value="Et harum quidem").system-select__radio-input
-                p.system-select__desc Et harum quidem
-            li.order-form__select-item.system-select__item
-              label.system-select__label
-                input(type="radio" name="system" value="Temporibus autem").system-select__radio-input
-                p.system-select__desc Temporibus autem
-            li.order-form__select-item.system-select__item
-              label.system-select__label
-                input(type="radio" name="system" value="Itaque earum rerum").system-select__radio-input
-                p.system-select__desc Itaque earum rerum
-
-
-
-      label(for="").order-form__label.order-form__label--email 
+      label().order-form__label.order-form__label--email 
         input.order-form__input.order-form__input--mail(type="email" name="email" placeholder="Ваш e-mail" maxlength="50")
-      label(for="").order-form__label.order-form__label--name 
+      label().order-form__label.order-form__label--name 
         input.order-form__input.order-form__input--name(type="text" name="name" placeholder="Ваше имя" maxlength="50")
-      label(for="").order-form__label.order-form__label--file
+      label().order-form__label.order-form__label--file
         input.order-form__input.order-form__input--file(type="file" name="file")
         span.order-form__input-title Прикрепить файл
         span.order-form__input-file-name 

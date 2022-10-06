@@ -13,6 +13,11 @@
         margin-top: 80px;
         margin-bottom: 150px;
     }
+
+    &__system-select {
+        position: relative;
+    }
+
     &__label {
         position: relative;
         width: 100%;
@@ -36,7 +41,7 @@
                         color: $standart-white;
                     }
                 }
-                & .order-form__select-wrapper {
+                & ~ .order-form__select-wrapper {
                     transition: $transition-basic;
                     opacity: 1;
                     pointer-events: all;
