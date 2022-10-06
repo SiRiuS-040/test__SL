@@ -1,14 +1,14 @@
 @font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato.woff2") format("woff2"), url("../Lato.woff") format("woff");
+  font-family: "Raleway";
+  src: url("../fonts/Raleway.woff2") format("woff2"), url("../Raleway.woff") format("woff");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway.woff2") format("woff2"), url("../Raleway.woff") format("woff");
+  font-family: "Lato";
+  src: url("../fonts/Lato.woff2") format("woff2"), url("../Lato.woff") format("woff");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -624,7 +624,7 @@ textarea {
   color: #ffffff;
 }
 
-.header__title--colored {
+.header__title-colored {
   color: #42a9ed;
 }
 
