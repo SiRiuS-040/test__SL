@@ -55,6 +55,14 @@ html {
         transition: $transition-basic;
         opacity: 0.85;
     }
+    &:focus {
+        transition: $transition-basic;
+        border-color: $special-black;
+    }
+    &:focus-within {
+        transition: $transition-basic;
+        border-color: $special-black;
+    }
     &--blue {
         background-color: $standart-blue;
         color: $standart-white;

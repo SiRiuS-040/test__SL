@@ -43,6 +43,14 @@
             transition: $transition-basic;
             color: $light-blue;
         }
+        &:focus {
+            transition: $transition-basic;
+            color: $light-blue;
+        }
+        &:focus-within {
+            transition: $transition-basic;
+            color: $light-blue;
+        }
         @media (min-width: $tablet-width) {
             padding-left: 30px;
             position: relative;
