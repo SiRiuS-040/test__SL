@@ -33,11 +33,6 @@ document.addEventListener('click', function (evt) {
         mainSelectLabel.classList.remove('select-active');
     }
 
-    if (evt.target && evt.target.closest('.order-form__input-title')) {
-        let fileUpload = document.querySelector('.order-form__input--file');
-        fileUpload.click();
-    }
-
     if (evt.target && evt.target.closest('.order-form__input-file-delete')) {
         evt.preventDefault();
         let fileLabel = document.querySelector('.order-form__label--file');
@@ -51,9 +46,9 @@ document.addEventListener('click', function (evt) {
 })
 
 function setFile(fileArr) {
+    let fileLabel = document.querySelector('.order-form__label--file');
+    let fileNameTitle = document.querySelector('.order-form__input-file-name');
     if (fileArr.length > 0) {
-        let fileLabel = document.querySelector('.order-form__label--file');
-        let fileNameTitle = document.querySelector('.order-form__input-file-name');
         fileLabel.classList.add('uploaded');
         fileNameTitle.textContent = fileArr[0].name;
     } else {
